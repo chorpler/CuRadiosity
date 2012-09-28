@@ -88,6 +88,9 @@ public:
 	        return tmp;
 	}
 
+	char* getAction() {
+		// This is where we determine if it's Compute or Visualize.
+	}
 /**
 	 * Free malloced memory.
 	 */
@@ -149,6 +152,7 @@ protected:
 
 private:
 
+	const char* actions_;
 	const char* helpC_;
 	const char* versC_;
 	// Arguments delimiter.
