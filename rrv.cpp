@@ -116,7 +116,7 @@ class ContinousSaver: public ProgressObserverMultiStep {
 					<< "-step" << std::setw(5) << std::setfill('0') << renderer_->getTotalCount()
 					//<< "-snapshot" << std::setw(3) << std::setfill('0') << perStepCounter_
 					<< ".xml";
-			scene_->save(nameStream.str());
+			//scene_->save(nameStream.str());
 			perStepCounter_ ++;
 			renderer_->incTotalCount();
 			//std::cout << "  Saved " << renderer_->getTotalCount() << " files so far." << std::endl;

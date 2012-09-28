@@ -1,4 +1,4 @@
-﻿Build started 2012-09-28 03:04:19.
+﻿Build started 2012-09-28 03:18:40.
      1>Project "D:\code\nbod\C\src\nbody\nbody_vs2010.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32/Release/nbody.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -14,68 +14,156 @@
        Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        CudaBuild:
          Compiling CUDA source file FormFactorEngine.cu...
-         cmd.exe /C "C:\Users\admin\AppData\Local\Temp\4d5a1a7d56e045828540e29d25505c19.cmd"
+         cmd.exe /C "C:\Users\admin\AppData\Local\Temp\649f0f44d1fb49b1a8a19908496451d7.cmd"
          "D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\bin\nvcc.exe" -gencode=arch=compute_10,code=\"sm_10,compute_10\" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin" -I"d:\code\common" -I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include"    --keep-dir "Release" -maxrregcount=0  --machine 32 --compile      -Xcompiler "/EHsc /nologo /O2 /Zi  /MT " -o "Win32/Release/FormFactorEngine.cu.obj" "D:\code\nbod\C\src\nbody\FormFactorEngine.cu"
          
          D:\code\nbod\C\src\nbody>"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\bin\nvcc.exe" -gencode=arch=compute_10,code=\"sm_10,compute_10\" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin" -I"d:\code\common" -I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include"    --keep-dir "Release" -maxrregcount=0  --machine 32 --compile      -Xcompiler "/EHsc /nologo /O2 /Zi  /MT " -o "Win32/Release/FormFactorEngine.cu.obj" "D:\code\nbod\C\src\nbody\FormFactorEngine.cu" 
          FormFactorEngine.cu
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "pitch" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "dev_n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(401): warning : variable "devPtr" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(503): warning : statement is unreachable
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "w" was declared but never referenced
          
-         tmpxft_00000b90_00000000-3_FormFactorEngine.compute_20.cudafe1.gpu
-         tmpxft_00000b90_00000000-7_FormFactorEngine.compute_20.cudafe2.gpu
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "h" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "clr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "r" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "g" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "b" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(400): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(402): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(504): warning : statement is unreachable
+         
+         tmpxft_00000f9c_00000000-3_FormFactorEngine.compute_20.cudafe1.gpu
+         tmpxft_00000f9c_00000000-7_FormFactorEngine.compute_20.cudafe2.gpu
          FormFactorEngine.cu
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "pitch" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "dev_n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(401): warning : variable "devPtr" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(503): warning : statement is unreachable
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "w" was declared but never referenced
          
-         tmpxft_00000b90_00000000-0_FormFactorEngine.compute_10.cudafe1.gpu
-         tmpxft_00000b90_00000000-11_FormFactorEngine.compute_10.cudafe2.gpu
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "h" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "clr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "r" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "g" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "b" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(400): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(402): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(504): warning : statement is unreachable
+         
+         tmpxft_00000f9c_00000000-0_FormFactorEngine.compute_10.cudafe1.gpu
+         tmpxft_00000f9c_00000000-11_FormFactorEngine.compute_10.cudafe2.gpu
          FormFactorEngine.cu
      1>d:\code\nbod\c\src\nbody\PatchRandomAccessEnumerator.h(55): warning : delete of pointer to incomplete class
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "pitch" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "dev_n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(401): warning : variable "devPtr" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(503): warning : statement is unreachable
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "w" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "h" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "clr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "r" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "g" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "b" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(400): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(402): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(504): warning : statement is unreachable
          
          FormFactorEngine.cu
      1>d:\code\nbod\c\src\nbody\PatchRandomAccessEnumerator.h(55): warning : delete of pointer to incomplete class
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "pitch" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "dev_n" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(401): warning : variable "devPtr" was declared but never referenced
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
          
-     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(503): warning : statement is unreachable
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "w" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "h" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(295): warning : variable "clr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "r" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "g" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(297): warning : variable "b" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(398): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(399): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(400): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(402): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(504): warning : statement is unreachable
          
      1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(133): warning : Cannot tell what pointer points to, assuming global memory space
-     1>ptxas C : /Users/admin/AppData/Local/Temp/tmpxft_00000b90_00000000-1_FormFactorEngine.compute_10.ptx, line 73; warning : Double is not supported. Demoting to float
-         tmpxft_00000b90_00000000-3_FormFactorEngine.compute_20.cudafe1.cpp
-         tmpxft_00000b90_00000000-20_FormFactorEngine.compute_20.ii
+     1>ptxas C : /Users/admin/AppData/Local/Temp/tmpxft_00000f9c_00000000-1_FormFactorEngine.compute_10.ptx, line 73; warning : Double is not supported. Demoting to float
+         tmpxft_00000f9c_00000000-3_FormFactorEngine.compute_20.cudafe1.cpp
+         tmpxft_00000f9c_00000000-20_FormFactorEngine.compute_20.ii
        ClCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Id:\code\WinSDK\v7.0A\Include /Id:\code\freeglut\include /Id:\code\common /Id:\code\include /I./ /I../../common/inc /I../../../shared/inc /I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include" /Zi /nologo /W3 /WX- /O2 /Oi /Ot /Oy- /GL /D WIN32 /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32/Release/" /Fd"Win32/Release/vc100.pdb" /Gd /TP /wd4305 /analyze- /errorReport:prompt rrv.cpp
+         rrv.cpp
+         Note: including windows.h
+         Note: including math.h
+         Note: including assert.h
+         Note: including windows.h
+         Note: including math.h
+         Note: including assert.h
+         Note: including time.h
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"d:\rrv\/nbody.exe" /NOLOGO /LIBPATH:"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32" /LIBPATH:D:\code\WinSDK\v7.0A\Lib /LIBPATH:D:\code\nbod\shared\lib\Win32 /LIBPATH:d:\code\freeglut\lib /LIBPATH:D:\code\cuda\lib\Win32 /LIBPATH:d:\code\lib /LIBPATH:d:\code\shared\lib\Win32 /LIBPATH:"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\lib\Win32" cuda.lib cudart.lib glew32.lib glu32.lib freeglut.lib glut32.lib cutil32.lib shrUtils32.lib AdvAPI32.Lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Win32/Release/nbody.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"d:\rrv\nbody.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:\rrv\nbody.lib" /MACHINE:X86 Win32/Release/bodysystemcuda.cu.obj
          Win32/Release/FormFactorEngine.cu.obj
@@ -130,4 +218,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:18.00
+Time Elapsed 00:00:19.18

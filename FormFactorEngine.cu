@@ -197,9 +197,9 @@ __global__ void newloop(fakeMap cudaMap, unsigned char *screenCUDA, Matrix devic
 	r = screenCUDA[ base +2];
 	clr = ((unsigned)r)+((unsigned)g<<8)+((unsigned)b<<16);
 	double base2 = device.elements[ twoToOne ];
-	if(b1 == 0 && b2 == 0 && b3 == 0 && b4 == 0) {
-		cuPrintf("Screencuda blkX,blkY,thdX,thdY [%d,%d,%d,%d]: %d\n", b1, b2, b3, b4, device.elements[twoToOne]);
-	}
+	//if(b1 == 0 && b2 == 0 && b3 == 0 && b4 == 0) {
+	//	cuPrintf("Screencuda blkX,blkY,thdX,thdY [%d,%d,%d,%d]: %d\n", b1, b2, b3, b4, device.elements[twoToOne]);
+	//}
 	//if(base2 > 0.0001) {
 		//cuPrintf("Device is: %f\n", base2);
 	//}
@@ -262,6 +262,7 @@ void FormFactorEngine::fillCacheLine(int destPatch, PatchCacheLine *cacheLine)
 
 map<unsigned,double> *FormFactorEngine::getFF()
 {
+	printf("Now in getFF.\n");
 	//map<unsigned,double> *ffmap = new map<unsigned,double>();
 
 	// We can't create a map in CUDA space, so let's create two arrays and use them as a pseudo-map.
@@ -304,10 +305,10 @@ map<unsigned,double> *FormFactorEngine::getFF()
 	dim3 gridStuff(16, 16);
 	dim3 blkStuff(32, 32);
 	// void newloop(fakeMap cudaMap, unsigned char *screenCUDA, Matrix device, int e1)
-	cudaPrintfInit();
+	//cudaPrintfInit();
 	newloop<<<blkStuff, gridStuff>>>(cudaMap, screenCUDA, device, EDGE_1);
-	cudaPrintfDisplay(stdout, true);
-	cudaPrintfEnd();
+	//cudaPrintfDisplay(stdout, true);
+	//cudaPrintfEnd();
 	HANDLE_ERROR(cudaMemcpy( localMap.keys, cudaMap.keys, sizeof(unsigned) * EDGE_2 * EDGE_2, cudaMemcpyDeviceToHost));
 	HANDLE_ERROR(cudaMemcpy( localMap.data, cudaMap.data, sizeof(double) * EDGE_2 * EDGE_2, cudaMemcpyDeviceToHost));
 	HANDLE_ERROR(cudaMemcpy( screenHost, screenCUDA, sizeof(unsigned char) * screenDataSize, cudaMemcpyDeviceToHost));
@@ -329,34 +330,34 @@ map<unsigned,double> *FormFactorEngine::getFF()
 	}
 
 	//int w, h;
-	for(w=128;w<(128+512);w++)
-		for(h=128;h<(128+512);h++)
-		{ 
-			b = screen[ 3*(w*resH+h) +0];
-			g = screen[ 3*(w*resH+h) +1];
-			r = screen[ 3*(w*resH+h) +2];
-			clr = ((unsigned)r)+((unsigned)g<<8)+((unsigned)b<<16);
+	//for(w=128;w<(128+512);w++)
+	//	for(h=128;h<(128+512);h++)
+	//	{ 
+	//		b = screen[ 3*(w*resH+h) +0];
+	//		g = screen[ 3*(w*resH+h) +1];
+	//		r = screen[ 3*(w*resH+h) +2];
+	//		clr = ((unsigned)r)+((unsigned)g<<8)+((unsigned)b<<16);
 
-			screen[ 3*(w*resH+h) +0] = (unsigned char)(b*ffcoefs[w-128][h-128]);
-			screen[ 3*(w*resH+h) +1] = (unsigned char)(g*ffcoefs[w-128][h-128]);
-			screen[ 3*(w*resH+h) +2] = (unsigned char)(r*ffcoefs[w-128][h-128]);
+	//		screen[ 3*(w*resH+h) +0] = (unsigned char)(b*ffcoefs[w-128][h-128]);
+	//		screen[ 3*(w*resH+h) +1] = (unsigned char)(g*ffcoefs[w-128][h-128]);
+	//		screen[ 3*(w*resH+h) +2] = (unsigned char)(r*ffcoefs[w-128][h-128]);
 
-			((*ffmap2)[clr]) += ffcoefs[w-128][h-128];
-		}
+	//		((*ffmap2)[clr]) += ffcoefs[w-128][h-128];
+	//	}
 
-		map<unsigned,double>::iterator it;
-		//for(int i = 0; i < ffmap2.size(); i++) {
-		int i = 0;
-		printf("ffmap2 size: %d.  ffmap size: %d.\n", ffmap2->size(), ffmap->size());
-		for(it = ffmap2->begin(); it != ffmap2->end(); it++) {
-			unsigned key = it->first;
-			double dat = it->second;
-			//if((ffmap2[i] - (*ffmap)[i]) > EPSILON) {
-			if(((*ffmap2)[key] - (*ffmap)[key]) > EPSILON) {
-				printf("%05d: CUDA ffmap[%d]: %f.  Real: %f. Iterator: %f.\n", i, key, (*ffmap)[key], (*ffmap2)[key], dat);
-			}
-			i++;
-		}
+		//map<unsigned,double>::iterator it;
+		////for(int i = 0; i < ffmap2.size(); i++) {
+		//int i = 0;
+		//printf("ffmap2 size: %d.  ffmap size: %d.\n", ffmap2->size(), ffmap->size());
+		//for(it = ffmap2->begin(); it != ffmap2->end(); it++) {
+		//	unsigned key = it->first;
+		//	double dat = it->second;
+		//	//if((ffmap2[i] - (*ffmap)[i]) > EPSILON) {
+		//	if(((*ffmap2)[key] - (*ffmap)[key]) > EPSILON) {
+		//		printf("%05d: CUDA ffmap[%d]: %f.  Real: %f. Iterator: %f.\n", i, key, (*ffmap)[key], (*ffmap2)[key], dat);
+		//	}
+		//	i++;
+		//}
 	//HANDLE_ERROR( cudaMemcpy( (void*)ffmap, (const void*)ffmap_cuda, sizeof(map<unsigned,double>) * sizeof(ffmap_cuda), cudaMemcpyDeviceToHost) );
 
 	//HANDLE_ERROR( cudaMemcpy( (void*)screenCUDA, (const void*)screen, sizeoYeahf(unsigned char) * sizeof(screen), cudaMemcpyHostToDevice) );
@@ -436,32 +437,32 @@ FormFactorEngine::FormFactorEngine (PatchRandomAccessEnumerator *patchEnumerator
 
 	//std::cout << "Done with cudaFree!" << endl;
 
-	double** ffcoefs_local = (double**) malloc(sizeof(double*) * EDGE_2);
+	//double** ffcoefs_local = (double**) malloc(sizeof(double*) * EDGE_2);
 
-	for(int i=0; i<EDGE_2; i++)
-	{
-		ffcoefs_local[i] = new double[EDGE_2]; 
-		for(int j=0; j<EDGE_2; j++)
-		{
-			unsigned tw = -EDGE_1 + i;
-			unsigned th = -EDGE_1 + j;
-			unsigned R = EDGE_2;
-			double cw = cos( M_PI * tw/(double)R );
-			double ch = cos( M_PI * th/(double)R );
-			ffcoefs_local[i][j] = cw*ch;
-		}
-	}
+	//for(int i=0; i<EDGE_2; i++)
+	//{
+	//	ffcoefs_local[i] = new double[EDGE_2]; 
+	//	for(int j=0; j<EDGE_2; j++)
+	//	{
+	//		unsigned tw = -EDGE_1 + i;
+	//		unsigned th = -EDGE_1 + j;
+	//		unsigned R = EDGE_2;
+	//		double cw = cos( M_PI * tw/(double)R );
+	//		double ch = cos( M_PI * th/(double)R );
+	//		ffcoefs_local[i][j] = cw*ch;
+	//	}
+	//}
 
 	//ffcoefs = ffcoefs_local;
 	
-	for(int i=0; i < EDGE_2; i++) {
-		ffcoefs[i] = new double[EDGE_2];
-		for(int j=0; j < EDGE_2; j++) {
-			ffcoefs[i][j] = host.elements[i*EDGE_2+j];
-			if((ffcoefs[i][j] - ffcoefs_local[i][j] > EPSILON) || ((i%100+j== 34))) // && (i % 50 == 0))
-				printf("Cuda [%d, %d]: %f. Real: %f.\n", i, j, ffcoefs[i][j], ffcoefs_local[i][j]);
-		}
-	}
+	//for(int i=0; i < EDGE_2; i++) {
+	//	ffcoefs[i] = new double[EDGE_2];
+	//	for(int j=0; j < EDGE_2; j++) {
+	//		ffcoefs[i][j] = host.elements[i*EDGE_2+j];
+	//		if((ffcoefs[i][j] - ffcoefs_local[i][j] > EPSILON) || ((i%100+j== 34))) // && (i % 50 == 0))
+	//			printf("Cuda [%d, %d]: %f. Real: %f.\n", i, j, ffcoefs[i][j], ffcoefs_local[i][j]);
+	//	}
+	//}
 
 	std::cout << "ffcoefs is now full of good stuff." << endl;
 	//HANDLE_ERROR( cudaMemcpy( (void*)screenCUDA, (const void*)screen, sizeof(unsigned char) * sizeof(screen), cudaMemcpyHostToDevice) );
