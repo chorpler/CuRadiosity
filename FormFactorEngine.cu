@@ -197,6 +197,9 @@ __global__ void newloop(fakeMap cudaMap, unsigned char *screenCUDA, Matrix devic
 	r = screenCUDA[ base +2];
 	clr = ((unsigned)r)+((unsigned)g<<8)+((unsigned)b<<16);
 	double base2 = device.elements[ twoToOne ];
+	if(b1 == 0 && b2 == 0 && b3 == 0 && b4 == 0) {
+		cuPrintf("Screencuda blkX,blkY,thdX,thdY [%d,%d,%d,%d]: %d\n", b1, b2, b3, b4, device.elements[twoToOne]);
+	}
 	//if(base2 > 0.0001) {
 		//cuPrintf("Device is: %f\n", base2);
 	//}
@@ -301,10 +304,10 @@ map<unsigned,double> *FormFactorEngine::getFF()
 	dim3 gridStuff(16, 16);
 	dim3 blkStuff(32, 32);
 	// void newloop(fakeMap cudaMap, unsigned char *screenCUDA, Matrix device, int e1)
-	//cudaPrintfInit();
+	cudaPrintfInit();
 	newloop<<<blkStuff, gridStuff>>>(cudaMap, screenCUDA, device, EDGE_1);
-	//cudaPrintfDisplay(stdout, true);
-	//cudaPrintfEnd();
+	cudaPrintfDisplay(stdout, true);
+	cudaPrintfEnd();
 	HANDLE_ERROR(cudaMemcpy( localMap.keys, cudaMap.keys, sizeof(unsigned) * EDGE_2 * EDGE_2, cudaMemcpyDeviceToHost));
 	HANDLE_ERROR(cudaMemcpy( localMap.data, cudaMap.data, sizeof(double) * EDGE_2 * EDGE_2, cudaMemcpyDeviceToHost));
 	HANDLE_ERROR(cudaMemcpy( screenHost, screenCUDA, sizeof(unsigned char) * screenDataSize, cudaMemcpyDeviceToHost));
@@ -320,9 +323,10 @@ map<unsigned,double> *FormFactorEngine::getFF()
 
 	map<unsigned,double> *ffmap = new map<unsigned,double>();
 	map<unsigned,double> *ffmap2 = new map<unsigned,double>();
-	//for(int i = 0; i < EDGE_2 * EDGE_2; i++) {
-	//	(*ffmap)[localMap.keys[i]] += localMap.data[i];
-	//}
+	for(int i = 0; i < EDGE_2 * EDGE_2; i++) {
+		(*ffmap)[localMap.keys[i]] += localMap.data[i];
+		//if(i%10000 == 0)printf("Localmap key %d, + %f, now %f.\n", localMap.keys[i], localMap.data[i], (*ffmap)[localMap.keys[i]]);
+	}
 
 	//int w, h;
 	for(w=128;w<(128+512);w++)
@@ -340,19 +344,19 @@ map<unsigned,double> *FormFactorEngine::getFF()
 			((*ffmap2)[clr]) += ffcoefs[w-128][h-128];
 		}
 
-		//map<unsigned,double>::iterator it;
-		////for(int i = 0; i < ffmap2.size(); i++) {
-		//int i = 0;
-		//printf("ffmap2 size: %d.  ffmap size: %d.\n", ffmap2->size(), ffmap->size());
-		//for(it = ffmap2->begin(); it != ffmap2->end(); it++) {
-		//	unsigned key = it->first;
-		//	double dat = it->second;
-		//	//if((ffmap2[i] - (*ffmap)[i]) > EPSILON) {
-		//	//if(((*ffmap2)[key] - (*ffmap)[key]) > EPSILON) {
-		//		printf("%05d: CUDA ffmap[%d]: %f.  Real: %f. Iterator: %f.\n", i, key, (*ffmap)[key], (*ffmap2)[key], dat);
-		//	//}
-		//	i++;
-		//}
+		map<unsigned,double>::iterator it;
+		//for(int i = 0; i < ffmap2.size(); i++) {
+		int i = 0;
+		printf("ffmap2 size: %d.  ffmap size: %d.\n", ffmap2->size(), ffmap->size());
+		for(it = ffmap2->begin(); it != ffmap2->end(); it++) {
+			unsigned key = it->first;
+			double dat = it->second;
+			//if((ffmap2[i] - (*ffmap)[i]) > EPSILON) {
+			if(((*ffmap2)[key] - (*ffmap)[key]) > EPSILON) {
+				printf("%05d: CUDA ffmap[%d]: %f.  Real: %f. Iterator: %f.\n", i, key, (*ffmap)[key], (*ffmap2)[key], dat);
+			}
+			i++;
+		}
 	//HANDLE_ERROR( cudaMemcpy( (void*)ffmap, (const void*)ffmap_cuda, sizeof(map<unsigned,double>) * sizeof(ffmap_cuda), cudaMemcpyDeviceToHost) );
 
 	//HANDLE_ERROR( cudaMemcpy( (void*)screenCUDA, (const void*)screen, sizeoYeahf(unsigned char) * sizeof(screen), cudaMemcpyHostToDevice) );
@@ -360,10 +364,10 @@ map<unsigned,double> *FormFactorEngine::getFF()
 
 		//glDrawPixels(resW, resH, GL_BGR, GL_UNSIGNED_BYTE, screen);
 
-	cudaFree(screenCUDA);
-	cudaFree(device.elements);
-	cudaFree(cudaMap.keys);
-	cudaFree(cudaMap.data);
+	//cudaFree(screenCUDA);
+	//cudaFree(device.elements);
+	//cudaFree(cudaMap.keys);
+	//cudaFree(cudaMap.data);
 	delete[] screen;
 	//delete[] localMap.keys;
 	//delete[] localMap.data;
@@ -372,7 +376,7 @@ map<unsigned,double> *FormFactorEngine::getFF()
 	//delete screenHost;
 	//delete screenCUDA;
 
-	return ffmap2;
+	return ffmap;
 
 }
 
