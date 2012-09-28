@@ -1,0 +1,165 @@
+﻿Build started 2012-09-28 02:20:10.
+     1>Project "D:\code\nbod\C\src\nbody\nbody_vs2010.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Win32/Release/nbody.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /Id:\code\common /I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\bin" /I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include" /I. /FIcuda_runtime.h /c D:\code\nbod\C\src\nbody\FormFactorEngine.cu 
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Compiling CUDA source file FormFactorEngine.cu...
+         cmd.exe /C "C:\Users\admin\AppData\Local\Temp\b6159dc8e3ad43049fd28dde61a421cb.cmd"
+         "D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\bin\nvcc.exe" -gencode=arch=compute_10,code=\"sm_10,compute_10\" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin" -I"d:\code\common" -I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include"    --keep-dir "Release" -maxrregcount=0  --machine 32 --compile      -Xcompiler "/EHsc /nologo /O2 /Zi  /MT " -o "Win32/Release/FormFactorEngine.cu.obj" "D:\code\nbod\C\src\nbody\FormFactorEngine.cu"
+         
+         D:\code\nbod\C\src\nbody>"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\bin\nvcc.exe" -gencode=arch=compute_10,code=\"sm_10,compute_10\" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin" -I"d:\code\common" -I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include"    --keep-dir "Release" -maxrregcount=0  --machine 32 --compile      -Xcompiler "/EHsc /nologo /O2 /Zi  /MT " -o "Win32/Release/FormFactorEngine.cu.obj" "D:\code\nbod\C\src\nbody\FormFactorEngine.cu" 
+         FormFactorEngine.cu
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(393): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(394): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(395): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(499): warning : statement is unreachable
+         
+         tmpxft_000027e0_00000000-3_FormFactorEngine.compute_20.cudafe1.gpu
+         tmpxft_000027e0_00000000-7_FormFactorEngine.compute_20.cudafe2.gpu
+         FormFactorEngine.cu
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(393): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(394): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(395): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(499): warning : statement is unreachable
+         
+         tmpxft_000027e0_00000000-0_FormFactorEngine.compute_10.cudafe1.gpu
+         tmpxft_000027e0_00000000-11_FormFactorEngine.compute_10.cudafe2.gpu
+         FormFactorEngine.cu
+     1>d:\code\nbod\c\src\nbody\PatchRandomAccessEnumerator.h(55): warning : delete of pointer to incomplete class
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(393): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(394): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(395): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(499): warning : statement is unreachable
+         
+         FormFactorEngine.cu
+     1>d:\code\nbod\c\src\nbody\PatchRandomAccessEnumerator.h(55): warning : delete of pointer to incomplete class
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b1" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b2" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b3" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(167): warning : variable "b4" was set but never used
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(393): warning : variable "pitch" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(394): warning : variable "n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(395): warning : variable "dev_n" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(397): warning : variable "devPtr" was declared but never referenced
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(499): warning : statement is unreachable
+         
+     1>D:/code/nbod/C/src/nbody/FormFactorEngine.cu(133): warning : Cannot tell what pointer points to, assuming global memory space
+     1>ptxas C : /Users/admin/AppData/Local/Temp/tmpxft_000027e0_00000000-1_FormFactorEngine.compute_10.ptx, line 73; warning : Double is not supported. Demoting to float
+         tmpxft_000027e0_00000000-3_FormFactorEngine.compute_20.cudafe1.cpp
+         tmpxft_000027e0_00000000-20_FormFactorEngine.compute_20.ii
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"d:\rrv\/nbody.exe" /NOLOGO /LIBPATH:"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32" /LIBPATH:D:\code\WinSDK\v7.0A\Lib /LIBPATH:D:\code\nbod\shared\lib\Win32 /LIBPATH:d:\code\freeglut\lib /LIBPATH:D:\code\cuda\lib\Win32 /LIBPATH:d:\code\lib /LIBPATH:d:\code\shared\lib\Win32 /LIBPATH:"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\lib\Win32" cuda.lib cudart.lib glew32.lib glu32.lib freeglut.lib glut32.lib cutil32.lib shrUtils32.lib AdvAPI32.Lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Win32/Release/nbody.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"d:\rrv\nbody.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:\rrv\nbody.lib" /MACHINE:X86 Win32/Release/bodysystemcuda.cu.obj
+         Win32/Release/FormFactorEngine.cu.obj
+         Win32/Release/rendercheck_gl.obj
+         Win32/Release/ArgumentParser.obj
+         Win32/Release/BarrelEntity.obj
+         Win32/Release/ComputeArguments.obj
+         Win32/Release/ConsoleProgressIndicator.obj
+         Win32/Release/CuboidEntity.obj
+         Win32/Release/Entity.obj
+         Win32/Release/EntitySet.obj
+         Win32/Release/param.obj
+         Win32/Release/paramgl.obj
+         Win32/Release/FormFactorEngine.obj
+         Win32/Release/GlobeEntity.obj
+         Win32/Release/nbody.obj
+         Win32/Release/PatchCache.obj
+         Win32/Release/PatchCacheLine.obj
+         Win32/Release/PatchRandomAccessEnumerator.obj
+         Win32/Release/PatchSequenceEnumerator.obj
+         Win32/Release/ProgressObserverMultiStep.obj
+         Win32/Release/ProgressSubjectMultiStep.obj
+         Win32/Release/RadiosityRenderer.obj
+         Win32/Release/render_particles.obj
+         Win32/Release/rrv.obj
+         Win32/Release/Scene.obj
+         Win32/Release/TeapotEntity.obj
+         Win32/Release/TeapotEntityDef.obj
+         Win32/Release/TransformMatrix.obj
+         Win32/Release/TriangleEntity.obj
+         Win32/Release/TriangleSet.obj
+         Win32/Release/TriangleSetExt.obj
+         Win32/Release/VisualizeArguments.obj
+         Win32/Release/Visualizer.obj
+         Win32/Release/XMLBodyReader.obj
+         Win32/Release/XMLHelper.obj
+         Win32/Release/XMLNames.obj
+         Win32/Release/xmlParser.obj
+         Win32/Release/XMLWrapper.obj
+         Win32/Release/XMLWriter.obj
+         D:\code\nbod\C\common\lib\Win32\cutil32.lib
+         D:\code\nbod\shared\lib\Win32\shrUtils32.lib
+         Generating code
+         Finished generating code
+         nbody_vs2010.vcxproj -> d:\rrv\nbody.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"d:\rrv\/nbody.exe;#1" /manifest Win32/Release/nbody.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Win32/Release/nbody.unsuccessfulbuild".
+         Touching "Win32/Release/nbody.lastbuildstate".
+     1>Done Building Project "D:\code\nbod\C\src\nbody\nbody_vs2010.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:18.09

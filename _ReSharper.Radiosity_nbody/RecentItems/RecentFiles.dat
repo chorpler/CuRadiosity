@@ -1,0 +1,65 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:bodysystemcpu_impl.h" caret="4553" fromTop="19" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:bodysystemcuda_impl.h" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:bodysystemcpu.h" caret="1304" fromTop="19" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:bodysystem.h" caret="5369" fromTop="175" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:Visualizer.h" caret="2387" fromTop="18" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:Visualizer.cpp" caret="22390" fromTop="299" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:PatchRandomAccessEnumerator.h" caret="1745" fromTop="19" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.h" caret="1729" fromTop="57" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:PatchCache.cpp" caret="425" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:RadiosityRenderer.cpp" caret="790" fromTop="17" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:rrv.cpp" caret="396" fromTop="14" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:PatchCacheLine.cpp" caret="917" fromTop="21" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:RadiosityRenderer.h" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:PatchCacheLine.h" caret="288" fromTop="10" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:Scene.cpp" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:EntitySet.cpp" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:Entity.cpp" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:Entity.h" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:nbody.cpp" caret="8734" fromTop="293" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:bodysystemcuda.cu" caret="814" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:bodysystemcuda.h" caret="998" fromTop="23" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:TeapotEntityDef.cpp" caret="66146" fromTop="6" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:book.h" caret="1803" fromTop="32" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:ArgumentParser.h" caret="0" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:ComputeArguments.cpp" caret="3503" fromTop="34" />
+    <File id="F9750D72-D315-4F81-AF1B-10938220FFB3/f:shrQATest.h" caret="422" fromTop="11" />
+    <File id="F9750D72-D315-4F81-AF1B-10938220FFB3/f:shrUtils.h" caret="32854" fromTop="10" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="13253" fromTop="42" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="8163" fromTop="28" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:Visualizer.cpp" caret="22390" fromTop="4" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="871" fromTop="7" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="9639" fromTop="8" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="9868" fromTop="11" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="5325" fromTop="7" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="9623" fromTop="15" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="10703" fromTop="20" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="11352" fromTop="15" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="11330" fromTop="22" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="3" fromTop="0" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="304" fromTop="10" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="23463" fromTop="24" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="2453" fromTop="9" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="1118" fromTop="12" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="3211" fromTop="16" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="11599" fromTop="10" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="11021" fromTop="6" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="10720" fromTop="16" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="9751" fromTop="23" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="3008" fromTop="12" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="10108" fromTop="9" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cpp" caret="13253" fromTop="42" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="8756" fromTop="12" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="11188" fromTop="14" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="14156" fromTop="21" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="11644" fromTop="15" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="13807" fromTop="11" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="14032" fromTop="17" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="12688" fromTop="18" />
+    <File id="584F7145-2B30-0993-0601-B30773034D5F/f:FormFactorEngine.cu" caret="8510" fromTop="17" />
+  </RecentEdits>
+</RecentFiles>

@@ -1,0 +1,251 @@
+﻿Build started 2012-04-30 20:20:42.
+     1>Project "D:\code\nbod\C\src\nbody\nbody_vs2010.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Win32/Debug/nbody.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+         Found "CudaToolkitCustomDir".
+         Found "AdditionalDeps".
+         Found "CompileOut".
+         Found "Include".
+         Found "Keep".
+         Found "KeepDir".
+         Found "NvccCompilation".
+         Found "NvccPath".
+         Found "RequiredIncludes".
+         Found "TargetMachinePlatform".
+         Found "CInterleavedPTX".
+         Found "CodeGeneration".
+         Found "GPUDebugInfo".
+         Found "MaxRegCount".
+         Found "PtxAsOptionV".
+         Found "Defines".
+         Found "Emulation".
+         Found "HostDebugInfo".
+         Found "FastMath".
+         Found "Optimization".
+         Found "Runtime".
+         Found "RuntimeChecks".
+         Found "TypeInfo".
+         Found "Warning".
+         Found "AdditionalOptions".
+         Found "CommandLineTemplate".
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Id:\code\WinSDK\v7.0A\Include /Id:\code\freeglut\include /Id:\code\include /I./ /I../../common/inc /I../../../shared/inc /I"D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32/Debug/" /Fd"Win32/Debug/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ComputeArguments.cpp FormFactorEngine.cpp PatchCache.cpp RadiosityRenderer.cpp
+         FormFactorEngine.cpp
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2065: 'cudaError_t' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2146: syntax error : missing ')' before identifier 'err'
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2182: 'HandleError' : illegal use of type 'void'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\src\nbody\book.h(47): error C3861: 'malloc': identifier not found
+     1>d:\code\nbod\c\src\nbody\book.h(48): error C2065: 'EXIT_FAILURE' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(48): error C3861: 'exit': identifier not found
+     1>d:\code\nbod\c\src\nbody\book.h(50): error C3861: 'rand': identifier not found
+     1>d:\code\nbod\c\src\nbody\book.h(56): error C3861: 'malloc': identifier not found
+     1>d:\code\nbod\c\src\nbody\book.h(57): error C2065: 'EXIT_FAILURE' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(57): error C3861: 'exit': identifier not found
+     1>d:\code\nbod\c\src\nbody\book.h(59): error C3861: 'rand': identifier not found
+     1>d:\code\nbod\c\src\nbody\book.h(67): error C2144: syntax error : 'unsigned char' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(80): error C2144: syntax error : 'void' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(80): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'threadIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'blockIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'threadIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'blockIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2065: 'gridDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2144: syntax error : 'void' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2086: 'int __global__' : redefinition
+                 d:\code\nbod\c\src\nbody\book.h(80) : see declaration of '__global__'
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2065: 'uchar4' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2065: 'optr' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2059: syntax error : 'const'
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(48): error C2062: type 'int' unexpected
+     1>d:\code\nbod\c\common\inc\cutil_math.h(48): error C2062: type 'int' unexpected
+     1>d:\code\nbod\c\common\inc\cutil_math.h(48): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(49): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(49): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(53): error C2062: type 'int' unexpected
+     1>d:\code\nbod\c\common\inc\cutil_math.h(53): error C2062: type 'int' unexpected
+     1>d:\code\nbod\c\common\inc\cutil_math.h(53): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(54): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(54): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(931): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(931): error C2226: syntax error : unexpected type 'int2'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(931): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(932): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(932): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(935): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(935): error C2226: syntax error : unexpected type 'int3'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(935): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(936): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(936): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(939): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(939): error C2226: syntax error : unexpected type 'int4'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(939): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(940): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(940): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(944): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(944): error C2226: syntax error : unexpected type 'uint2'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(944): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(945): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(945): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(948): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(948): error C2226: syntax error : unexpected type 'uint3'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(948): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(949): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(949): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(952): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(952): error C2226: syntax error : unexpected type 'uint4'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(952): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(953): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(953): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(974): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(974): error C2226: syntax error : unexpected type 'int2'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(974): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(975): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(975): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(978): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(978): error C2226: syntax error : unexpected type 'int3'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(978): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(979): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(979): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(982): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(982): error C2226: syntax error : unexpected type 'int4'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(982): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(983): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(983): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(987): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(987): error C2226: syntax error : unexpected type 'uint2'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(987): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(988): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(988): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\common\inc\cutil_math.h(991): error C2146: syntax error : missing ')' before identifier 'a'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(991): error C2226: syntax error : unexpected type 'uint3'
+     1>d:\code\nbod\c\common\inc\cutil_math.h(991): fatal error C1003: error count exceeds 100; stopping compilation
+         ComputeArguments.cpp
+         Generating Code...
+         Compiling...
+         PatchCache.cpp
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2065: 'cudaError_t' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2146: syntax error : missing ')' before identifier 'err'
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2182: 'HandleError' : illegal use of type 'void'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\src\nbody\book.h(67): error C2144: syntax error : 'unsigned char' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(80): error C2144: syntax error : 'void' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(80): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'threadIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'blockIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'threadIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'blockIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2065: 'gridDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2144: syntax error : 'void' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2086: 'int __global__' : redefinition
+                 d:\code\nbod\c\src\nbody\book.h(80) : see declaration of '__global__'
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2065: 'uchar4' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2065: 'optr' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2059: syntax error : 'const'
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2447: '{' : missing function header (old-style formal list?)
+         Generating Code...
+         Compiling...
+         RadiosityRenderer.cpp
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2065: 'cudaError_t' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2146: syntax error : missing ')' before identifier 'err'
+     1>d:\code\nbod\c\src\nbody\book.h(21): error C2182: 'HandleError' : illegal use of type 'void'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2059: syntax error : ')'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\src\nbody\book.h(23): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\code\nbod\c\src\nbody\book.h(67): error C2144: syntax error : 'unsigned char' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(80): error C2144: syntax error : 'void' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(80): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'threadIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'blockIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(83): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'threadIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'blockIdx' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(84): error C2228: left of '.y' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2065: 'blockDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2065: 'gridDim' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(85): error C2228: left of '.x' must have class/struct/union
+                 type is ''unknown-type''
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2144: syntax error : 'void' should be preceded by ';'
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2086: 'int __global__' : redefinition
+                 d:\code\nbod\c\src\nbody\book.h(80) : see declaration of '__global__'
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2065: 'uchar4' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(104): error C2065: 'optr' : undeclared identifier
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2059: syntax error : 'const'
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2143: syntax error : missing ';' before '{'
+     1>d:\code\nbod\c\src\nbody\book.h(105): error C2447: '{' : missing function header (old-style formal list?)
+         Generating Code...
+     1>Done Building Project "D:\code\nbod\C\src\nbody\nbody_vs2010.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.31

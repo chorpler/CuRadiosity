@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{584F7145-2B30-0993-0601-B30773034D5F}</ProjectGuid>
+    <RootNamespace>nbody_vs2010</RootNamespace>
+    <ProjectName>nbody</ProjectName>
+    <CudaToolkitCustomDir />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 4.1.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>d:\rrv\</OutDir>
+    <IntDir>$(Platform)/$(Configuration)/</IntDir>
+    <IncludePath>$(DXSDK_DIR)\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>../../bin/win64/$(Configuration)/</OutDir>
+    <IntDir>$(Platform)/$(Configuration)/</IntDir>
+    <IncludePath>$(DXSDK_DIR)\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>d:\rrv\</OutDir>
+    <IntDir>$(Platform)/$(Configuration)/</IntDir>
+    <IncludePath>$(DXSDK_DIR)\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../../bin/win64/$(Configuration)/</OutDir>
+    <IntDir>$(Platform)/$(Configuration)/</IntDir>
+    <IncludePath>$(DXSDK_DIR)\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>d:\code\WinSDK\v7.0A\Include;d:\code\freeglut\include;d:\code\include;./;../../common/inc;../../../shared/inc;$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_MBCS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>glew32.lib;glu32.lib;freeglut.lib;glut32.lib;cudart.lib;cutil32D.lib;shrUtils32D.lib;AdvAPI32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\code\WinSDK\v7.0A\Lib;D:\code\nbod\shared\lib\Win32;d:\code\freeglut\lib;D:\code\cuda\lib\Win32;d:\code\lib;d:\code\shared\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)/nbody.exe</OutputFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <CodeGeneration>compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+      <Include>./;../../common/inc;../../../shared/inc</Include>
+      <Runtime>MTd</Runtime>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./;../../common/inc;../../../shared/inc;$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_MBCS;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;freeglut.lib;glew64.lib;cutil64D.lib;shrUtils64D.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir);../../common/lib/$(PlatformName);../../../shared/lib/$(PlatformName)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)/nbody.exe</OutputFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <CodeGeneration>compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+      <Include>./;../../common/inc;../../../shared/inc</Include>
+      <Defines>
+      </Defines>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Runtime>MTd</Runtime>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>d:\code\WinSDK\v7.0A\Include;d:\code\freeglut\include;d:\code\common;d:\code\include;./;../../common/inc;../../../shared/inc;$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_MBCS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4305;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cuda.lib;cudart.lib;glew32.lib;glu32.lib;freeglut.lib;glut32.lib;cutil32.lib;shrUtils32.lib;AdvAPI32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;D:\code\WinSDK\v7.0A\Lib;D:\code\nbod\shared\lib\Win32;d:\code\freeglut\lib;D:\code\cuda\lib\Win32;d:\code\lib;d:\code\shared\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)/nbody.exe</OutputFile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <CodeGeneration>compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+      <Runtime>MT</Runtime>
+      <Optimization>O2</Optimization>
+      <Include>d:\code\common</Include>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>./;../../common/inc;../../../shared/inc;$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_MBCS;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;freeglut.lib;glew64.lib;cutil64.lib;shrUtils64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir);../../common/lib/$(PlatformName);../../../shared/lib/$(PlatformName)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)/nbody.exe</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Runtime>MT</Runtime>
+      <CodeGeneration>compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\common\inc\rendercheck_gl.h" />
+    <ClInclude Include="ArgumentParser.h" />
+    <ClInclude Include="BarrelEntity.h" />
+    <ClInclude Include="bodysystem.h" />
+    <ClInclude Include="bodysystemcpu.h" />
+    <ClInclude Include="bodysystemcpu_impl.h" />
+    <ClInclude Include="bodysystemcuda.h" />
+    <ClInclude Include="bodysystemcuda_impl.h" />
+    <ClInclude Include="book.h" />
+    <ClInclude Include="ComputeArguments.h" />
+    <ClInclude Include="ConsoleProgressIndicator.h" />
+    <ClInclude Include="CuboidEntity.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntitySet.h" />
+    <ClInclude Include="FormFactorEngine.h" />
+    <ClInclude Include="GlobeEntity.h" />
+    <ClInclude Include="PatchCache.h" />
+    <ClInclude Include="PatchCacheLine.h" />
+    <ClInclude Include="PatchRandomAccessEnumerator.h" />
+    <ClInclude Include="PatchSequenceEnumerator.h" />
+    <ClInclude Include="ProgressObserverMultiStep.h" />
+    <ClInclude Include="ProgressSubjectMultiStep.h" />
+    <ClInclude Include="RadiosityRenderer.h" />
+    <ClInclude Include="render_particles.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="TeapotEntity.h" />
+    <ClInclude Include="TransformMatrix.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="TriangleEntity.h" />
+    <ClInclude Include="TriangleSet.h" />
+    <ClInclude Include="TriangleSetExt.h" />
+    <ClInclude Include="VisualizeArguments.h" />
+    <ClInclude Include="Visualizer.h" />
+    <ClInclude Include="XMLBodyReader.h" />
+    <ClInclude Include="XMLHelper.h" />
+    <ClInclude Include="XMLNames.h" />
+    <ClInclude Include="xmlParser.h" />
+    <ClInclude Include="XMLWrapper.h" />
+    <ClInclude Include="XMLWriter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\common\src\rendercheck_gl.cpp" />
+    <ClCompile Include="ArgumentParser.cpp" />
+    <ClCompile Include="BarrelEntity.cpp" />
+    <ClCompile Include="ComputeArguments.cpp" />
+    <ClCompile Include="ConsoleProgressIndicator.cpp" />
+    <ClCompile Include="CuboidEntity.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntitySet.cpp" />
+    <ClCompile Include="fancy\param.cpp" />
+    <ClCompile Include="fancy\paramgl.cpp" />
+    <ClCompile Include="FormFactorEngine.cpp" />
+    <ClCompile Include="GlobeEntity.cpp" />
+    <ClCompile Include="nbody.cpp" />
+    <ClCompile Include="PatchCache.cpp" />
+    <ClCompile Include="PatchCacheLine.cpp" />
+    <ClCompile Include="PatchRandomAccessEnumerator.cpp" />
+    <ClCompile Include="PatchSequenceEnumerator.cpp" />
+    <ClCompile Include="ProgressObserverMultiStep.cpp" />
+    <ClCompile Include="ProgressSubjectMultiStep.cpp" />
+    <ClCompile Include="RadiosityRenderer.cpp" />
+    <ClCompile Include="render_particles.cpp" />
+    <ClCompile Include="rrv.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="TeapotEntity.cpp" />
+    <ClCompile Include="TeapotEntityDef.cpp" />
+    <ClCompile Include="TransformMatrix.cpp" />
+    <ClCompile Include="TriangleEntity.cpp" />
+    <ClCompile Include="TriangleSet.cpp" />
+    <ClCompile Include="TriangleSetExt.cpp" />
+    <ClCompile Include="VisualizeArguments.cpp" />
+    <ClCompile Include="Visualizer.cpp" />
+    <ClCompile Include="XMLBodyReader.cpp" />
+    <ClCompile Include="XMLHelper.cpp" />
+    <ClCompile Include="XMLNames.cpp" />
+    <ClCompile Include="xmlParser.cpp" />
+    <ClCompile Include="XMLWrapper.cpp" />
+    <ClCompile Include="XMLWriter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="bodysystemcuda.cu">
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./;../../common/inc;../../../shared/inc</Include>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./;../../common/inc;../../../shared/inc</Include>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./;../../common/inc;../../../shared/inc</Include>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./;../../common/inc;../../../shared/inc</Include>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_10,sm_10;compute_20,sm_20</CodeGeneration>
+    </CudaCompile>
+    <CudaCompile Include="FormFactorEngine.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../common/cutil_vs2010.vcxproj">
+      <Name>cutil</Name>
+      <Project>{46FB0B73-5A53-444A-8E72-F4F0A373098C}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../../shared/shrUtils_vs2010.vcxproj">
+      <Name>shrUtils</Name>
+      <Project>{F9750D72-D315-4F81-AF1B-10938220FFB3}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 4.1.targets" />
+  </ImportGroup>
+</Project>
